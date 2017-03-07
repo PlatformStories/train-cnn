@@ -1,0 +1,46 @@
+{
+    "name": "train-cnn",
+    "version":"0.0.2",
+    "description": "Train a convolutional neural network classifier on the MNIST data set.",
+    "properties": {
+        "isPublic": true,
+        "timeout": 36000
+    },
+    "inputPortDescriptors": [
+        {
+            "name": "train_data",
+            "type": "directory",
+            "description": "Contains training images X.npz and corresponding labels y.npz.",
+            "required": true
+        },
+        {
+            "name": "nb_epoch",
+            "type": "string",
+            "description": "Number of training epochs to perform during training. Defaults to 10.",
+            "required": false
+        },
+        {
+            "name": "bit_depth",
+            "type": "string",
+            "description": "Bit depth of the input images. This parameter is necessary for proper normalization. Defaults to 8."
+        }
+    ],
+    "outputPortDescriptors": [
+        {
+            "name": "trained_model",
+            "type": "directory",
+            "description": "Contains the fully trained model with the architecture stored as model_arch.json and the weights as model_weights.h5."
+        }
+    ],
+    "containerDescriptors": [
+        {
+            "type": "DOCKER",
+            "properties": {
+                "image": "platformstories/train-cnn-docker-image",
+                "domain": "nvidiagpu"
+            },
+            "command": "python /train-cnn.py",
+            "isPublic": true
+        }
+    ]
+}
