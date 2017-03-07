@@ -86,7 +86,7 @@ docker build -t train-cnn .
 Create a container in interactive mode and mount the sample input under `/mnt/work/input/`:
 
 ```bash
-docker run -v full/path/to/sample-input:/mnt/work/input -it train-cnn
+docker run --rm -v full/path/to/sample-input:/mnt/work/input -it train-cnn
 ```
 
 Then, within the container:
