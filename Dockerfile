@@ -5,7 +5,7 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN pip install Theano Keras h5py
+RUN pip install Theano Keras==1.2.2 h5py
 
 ADD ./bin /
 COPY .theanorc /root/.theanorc
