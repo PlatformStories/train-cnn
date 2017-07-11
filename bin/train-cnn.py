@@ -28,6 +28,7 @@ class TrainCnn(GbdxTaskInterface):
             X_train = X_train.reshape(X_train.shape[0], 1, X_train.shape[1], X_train.shape[2])
         X_train = X_train.astype('float32')
         X_train /= float((2 ** bit_depth) - 1)
+	X_train = np.swapaxes(X_train, 1, -1)	
 
         # convert class vectors to binary class matrices
         Y_train = np_utils.to_categorical(y_train, nb_classes)
