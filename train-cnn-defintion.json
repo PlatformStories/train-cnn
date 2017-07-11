@@ -1,6 +1,6 @@
 {
     "name": "train-cnn",
-    "version":"0.0.4",
+    "version":"0.0.5",
     "description": "Train a convolutional neural network classifier on the MNIST data set.",
     "properties": {
         "isPublic": true,
@@ -37,7 +37,7 @@
             "type": "DOCKER",
             "properties": {
                 "image": "platformstories/train-cnn-docker-image",
-                "domain": "nvidiap2"
+                "domain": "nvidiag2"
             },
             "command": "python /train-cnn.py",
             "isPublic": true
