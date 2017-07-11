@@ -65,10 +65,7 @@ class TrainCnn(GbdxTaskInterface):
         os.makedirs(output_dir)
 
         # Save the model architecture and weights to output dir
-        json_str = model.to_json()
-        model.save_weights(os.path.join(output_dir, 'model_weights.h5'))
-        with open(os.path.join(output_dir, 'model_architecture.json'), 'w') as arch:
-            json.dump(json_str, arch)
+        model.save(os.path.join(output_dir, 'model.h5'))
 
 
 if __name__ == '__main__':
