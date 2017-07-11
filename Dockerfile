@@ -15,5 +15,4 @@ RUN apt-get -y update && apt-get -y \
 RUN pip install tensorflow-gpu Keras==1.2.2 h5py
 
 COPY ./bin /
-COPY .theanorc /root/.theanorc
 COPY keras.json /root/.keras/keras.json
