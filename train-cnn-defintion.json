@@ -1,6 +1,6 @@
 {
     "name": "train-cnn",
-    "version":"0.0.2",
+    "version":"0.0.3",
     "description": "Train a convolutional neural network classifier on the MNIST data set.",
     "properties": {
         "isPublic": true,
