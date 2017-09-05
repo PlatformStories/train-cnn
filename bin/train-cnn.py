@@ -28,7 +28,7 @@ class TrainCnn(GbdxTaskInterface):
             X_train = X_train.reshape(X_train.shape[0], 1, X_train.shape[1], X_train.shape[2])
         X_train = X_train.astype('float32')
         X_train /= float((2 ** bit_depth) - 1)
-	X_train = np.swapaxes(X_train, 1, -1)	
+	X_train = np.swapaxes(X_train, 1, -1)
 
         # convert class vectors to binary class matrices
         Y_train = np_utils.to_categorical(y_train, nb_classes)
@@ -57,8 +57,8 @@ class TrainCnn(GbdxTaskInterface):
                       metrics=['accuracy'])
 
         # Fit model on input data
-        model.fit(X_train, Y_train, batch_size=128, nb_epoch=nb_epoch,
-              verbose=1)
+        model.fit(X_train, Y_train, batch_size=128, epochs=nb_epoch,
+                  verbose=1)
 
         # Create the output directory
         output_dir = self.get_output_data_port('trained_model')
