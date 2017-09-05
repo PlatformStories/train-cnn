@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-cudnn5-runtime-ubuntu16.04
+FROM nvidia/cuda:8.0-cudnn6-runtime-ubuntu16.04
 
 RUN apt-get -y update && apt-get -y \
 	install python \
