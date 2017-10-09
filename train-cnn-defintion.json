@@ -3,7 +3,7 @@
     "version":"0.0.5",
     "description": "Train a convolutional neural network classifier on the MNIST data set.",
     "properties": {
-        "isPublic": true,
+        "isPublic": false,
         "timeout": 36000
     },
     "inputPortDescriptors": [
