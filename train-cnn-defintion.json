@@ -1,6 +1,7 @@
 {
     "name": "train-cnn",
     "version":"0.0.5",
+    "taskOwnerEmail": "kostas.stamatiou@digitalglobe.com",
     "description": "Train a convolutional neural network classifier on the MNIST data set.",
     "properties": {
         "isPublic": false,
